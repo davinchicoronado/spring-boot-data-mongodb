@@ -1,14 +1,17 @@
-package org.ada.school.service;
+package org.ada.school.service.implstub;
 
 import org.ada.school.dto.UserDto;
 import org.ada.school.model.User;
+import org.ada.school.repository.UserDocument;
+import org.ada.school.service.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Optional;
 
-@Service
+
 public class UserServiceHashMap
     implements UserService
 {
@@ -24,7 +27,7 @@ public class UserServiceHashMap
     }
 
     @Override
-    public User findById( String id )
+    public User findById(String id )
     {
         if ( usersMap.containsKey( id ) )
         {
